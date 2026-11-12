@@ -1,0 +1,289 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px 15px;
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 850px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #38bdf8;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+.panel {
+    background: #1e293b;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+}
+
+.setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.setting label {
+    min-width: 100px;
+    text-align: right;
+}
+
+input[type="range"] {
+    width: 180px;
+    accent-color: #38bdf8;
+}
+
+input[type="text"] {
+    background: #0f172a;
+    border: 1px solid #475569;
+    border-radius: 7px;
+    padding: 11px;
+    color: white;
+    width: 200px;
+}
+
+input:focus {
+    outline: 2px solid #38bdf8;
+}
+
+#bars {
+    height: 260px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 6px;
+    margin: 30px auto;
+}
+
+.bar {
+    flex: 1;
+    max-width: 65px;
+    min-width: 15px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 15px 25px;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+}
+
+.stat span {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.stat strong {
+    font-size: 27px;
+    color: #38bdf8;
+}
+
+#status {
+    text-align: center;
+    min-height: 25px;
+    margin: 20px 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background: #0369a1;
+}
+
+button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.share-button {
+    display: block;
+    margin: 15px auto 0;
+    background: #111;
+    border: 1px solid #475569;
+    width: min(100%, 260px);
+}
+
+.share-button:hover:not(:disabled) {
+    background: #333;
+}
+
+.ranking h2 {
+    text-align: center;
+    color: #facc15;
+}
+
+.ranking-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.tab {
+    background: #334155;
+    padding: 10px 14px;
+}
+
+.tab.active {
+    background: #0284c7;
+}
+
+.ranking-row {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 8px;
+    border-bottom: 1px solid #334155;
+}
+
+.rank-number {
+    color: #facc15;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rank-name {
+    overflow-wrap: anywhere;
+}
+
+.rank-detail {
+    color: #94a3b8;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.rank-score {
+    color: #38bdf8;
+    font-weight: bold;
+    text-align: right;
+}
+
+.empty {
+    text-align: center;
+    color: #94a3b8;
+    padding: 25px 5px;
+}
+
+.delete-button {
+    display: block;
+    margin: 25px auto 0;
+    background: #991b1b;
+}
+
+.delete-button:hover:not(:disabled) {
+    background: #b91c1c;
+}
+
+footer {
+    text-align: center;
+    color: #64748b;
+    font-size: 12px;
+    padding: 20px;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 29px;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+
+    .setting {
+        gap: 8px;
+    }
+
+    .setting label {
+        min-width: 75px;
+        font-size: 13px;
+    }
+
+    input[type="range"] {
+        width: 120px;
+    }
+
+    #bars {
+        height: 220px;
+        gap: 3px;
+    }
+
+    .bar {
+        font-size: 11px;
+    }
+
+    .stat {
+        min-width: 130px;
+        padding: 12px;
+    }
+
+    .stat strong {
+        font-size: 23px;
+    }
+
+    .ranking-row {
+        grid-template-columns: 30px 1fr auto;
+        font-size: 13px;
+    }
+}

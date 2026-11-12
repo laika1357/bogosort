@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BogoSort Experiment</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<main class="container">
+
+    <header>
+        <h1>💀 ボゴソート</h1>
+        <p>最も非効率なソートアルゴリズム。</p>
+    </header>
+
+    <section class="panel">
+
+        <div class="setting">
+            <label for="playerName">プレイヤー名</label>
+            <input
+                type="text"
+                id="playerName"
+                maxlength="20"
+                placeholder="名前を入力"
+                autocomplete="nickname"
+            >
+        </div>
+
+        <div class="setting">
+            <label for="count">数字の数</label>
+            <input type="range" id="count" min="2" max="8" value="5">
+            <span id="countValue">5</span>
+        </div>
+
+        <div class="setting">
+            <label for="speed">速度</label>
+            <input type="range" id="speed" min="1" max="100" value="30">
+            <span id="speedValue">30</span>
+        </div>
+
+    </section>
+
+    <section class="game">
+
+        <div id="bars"></div>
+
+        <div class="stats">
+            <div class="stat">
+                <span>シャッフル回数</span>
+                <strong id="attempts">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>タイム</span>
+                <strong id="timer">0.00秒</strong>
+            </div>
+        </div>
+
+        <p id="status">準備完了</p>
+
+        <div class="buttons">
+            <button id="start">スタート</button>
+            <button id="stop" disabled>停止</button>
+            <button id="reset">リセット</button>
+        </div>
+
+        <button id="share" class="share-button" disabled>
+            𝕏 結果をツイート
+        </button>
+
+    </section>
+
+    <section class="ranking panel">
+
+        <h2>🏆 ランキング</h2>
+
+        <div class="ranking-tabs">
+            <button class="tab active" data-mode="fewest">
+                最少回数
+            </button>
+
+            <button class="tab" data-mode="most">
+                最多回数
+            </button>
+
+            <button class="tab" data-mode="fastest">
+                最速タイム
+            </button>
+        </div>
+
+        <div id="rankingList">
+            ランキングデータがありません。
+        </div>
+
+        <button id="clearRanking" class="delete-button">
+            ランキングを削除
+        </button>
+
+    </section>
+
+    <footer>
+        BogoSort Experiment
+    </footer>
+
+</main>
+
+</body>
+</html>
